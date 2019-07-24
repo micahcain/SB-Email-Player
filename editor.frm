@@ -163,7 +163,7 @@ Check2.Visible = False
 Check3.Visible = False
 Dim editCrnt As String
 Dim editNum As Integer
-Open "archive.dat" For Input As 1
+Open App.Path + "\archive.dat" For Input As 1
 chooserNum = 0
 Do While Not EOF(1)
 editNum = editNum + 1

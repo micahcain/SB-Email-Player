@@ -1,25 +1,52 @@
 VERSION 5.00
-Object = "{D27CDB6B-AE6D-11CF-96B8-444553540000}#1.0#0"; "FlDbg9c.ocx"
+Object = "{D27CDB6B-AE6D-11CF-96B8-444553540000}#1.0#0"; "Flash.ocx"
 Begin VB.Form SbEmailPlayer 
-   BackColor       =   &H80000006&
+   BackColor       =   &H00000000&
    Caption         =   "Strong Bad's Email Player"
    ClientHeight    =   9420
    ClientLeft      =   1200
    ClientTop       =   1455
-   ClientWidth     =   13230
+   ClientWidth     =   13215
    Icon            =   "SbEmailPlayer.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MouseIcon       =   "SbEmailPlayer.frx":628A
    MousePointer    =   99  'Custom
    ScaleHeight     =   9420
-   ScaleWidth      =   13230
+   ScaleWidth      =   13215
    StartUpPosition =   2  'CenterScreen
+   Begin ShockwaveFlashObjectsCtl.ShockwaveFlash SBEMAIL 
+      Height          =   6855
+      Left            =   1920
+      TabIndex        =   8
+      Top             =   1320
+      Width           =   9255
+      _cx             =   16325
+      _cy             =   12091
+      FlashVars       =   ""
+      Movie           =   ""
+      Src             =   ""
+      WMode           =   "Window"
+      Play            =   -1  'True
+      Loop            =   -1  'True
+      Quality         =   "High"
+      SAlign          =   ""
+      Menu            =   -1  'True
+      Base            =   ""
+      AllowScriptAccess=   "always"
+      Scale           =   "ShowAll"
+      DeviceFont      =   0   'False
+      EmbedMovie      =   0   'False
+      BGColor         =   ""
+      SWRemote        =   ""
+      MovieData       =   ""
+      SeamlessTabbing =   -1  'True
+   End
    Begin VB.CommandButton getTheEmails 
       Caption         =   "&Get ALL the emails"
       Height          =   855
       Left            =   5708
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   8400
       Width           =   1815
    End
@@ -27,7 +54,7 @@ Begin VB.Form SbEmailPlayer
       BackColor       =   &H80000008&
       Caption         =   "Email Chooser"
       BeginProperty Font 
-         Name            =   "Unreal Tournament"
+         Name            =   "Arial"
          Size            =   9
          Charset         =   0
          Weight          =   400
@@ -38,7 +65,7 @@ Begin VB.Form SbEmailPlayer
       ForeColor       =   &H8000000E&
       Height          =   975
       Left            =   5348
-      TabIndex        =   3
+      TabIndex        =   2
       Top             =   0
       Width           =   2535
       Begin VB.OptionButton optNet 
@@ -47,7 +74,7 @@ Begin VB.Form SbEmailPlayer
          ForeColor       =   &H8000000E&
          Height          =   255
          Left            =   1440
-         TabIndex        =   6
+         TabIndex        =   5
          Top             =   600
          Width           =   975
       End
@@ -57,7 +84,7 @@ Begin VB.Form SbEmailPlayer
          ForeColor       =   &H8000000E&
          Height          =   255
          Left            =   120
-         TabIndex        =   5
+         TabIndex        =   4
          Top             =   600
          Width           =   1095
       End
@@ -66,7 +93,7 @@ Begin VB.Form SbEmailPlayer
          ItemData        =   "SbEmailPlayer.frx":C514
          Left            =   120
          List            =   "SbEmailPlayer.frx":C516
-         TabIndex        =   4
+         TabIndex        =   3
          Text            =   "TOTAL EMAILS MAN"
          Top             =   240
          Width           =   2295
@@ -76,7 +103,7 @@ Begin VB.Form SbEmailPlayer
       Caption         =   "ST&OP"
       Height          =   615
       Left            =   8640
-      TabIndex        =   2
+      TabIndex        =   1
       Top             =   8400
       Width           =   1095
    End
@@ -86,46 +113,14 @@ Begin VB.Form SbEmailPlayer
       Height          =   615
       Left            =   3360
       MaskColor       =   &H00000000&
-      TabIndex        =   1
+      TabIndex        =   0
       Top             =   8400
       Width           =   1095
    End
-   Begin ShockwaveFlashObjectsCtl.ShockwaveFlash SBEMAIL 
-      Height          =   6855
-      Left            =   1995
-      TabIndex        =   0
-      Top             =   1320
-      Width           =   9255
-      _cx             =   16325
-      _cy             =   12091
-      FlashVars       =   ""
-      Movie           =   ""
-      Src             =   ""
-      WMode           =   "Window"
-      Play            =   0   'False
-      Loop            =   -1  'True
-      Quality         =   "High"
-      SAlign          =   ""
-      Menu            =   -1  'True
-      Base            =   ""
-      AllowScriptAccess=   "always"
-      Scale           =   "NoBorder"
-      DeviceFont      =   0   'False
-      EmbedMovie      =   0   'False
-      BGColor         =   "FFFFFF"
-      SWRemote        =   ""
-      MovieData       =   ""
-      SeamlessTabbing =   -1  'True
-      Profile         =   -1  'True
-      ProfileAddress  =   ""
-      ProfilePort     =   1634887535
-      AllowNetworking =   "all"
-      AllowFullScreen =   "false"
-   End
    Begin ShockwaveFlashObjectsCtl.ShockwaveFlash SBEMAIL100 
       Height          =   6255
-      Left            =   795
-      TabIndex        =   7
+      Left            =   720
+      TabIndex        =   9
       Top             =   1560
       Width           =   11655
       _cx             =   20558
@@ -134,31 +129,26 @@ Begin VB.Form SbEmailPlayer
       Movie           =   ""
       Src             =   ""
       WMode           =   "Window"
-      Play            =   0   'False
+      Play            =   -1  'True
       Loop            =   -1  'True
       Quality         =   "High"
       SAlign          =   ""
       Menu            =   -1  'True
       Base            =   ""
       AllowScriptAccess=   "always"
-      Scale           =   "NoBorder"
+      Scale           =   "ShowAll"
       DeviceFont      =   0   'False
       EmbedMovie      =   0   'False
-      BGColor         =   "FFFFFF"
+      BGColor         =   ""
       SWRemote        =   ""
       MovieData       =   ""
       SeamlessTabbing =   -1  'True
-      Profile         =   0   'False
-      ProfileAddress  =   ""
-      ProfilePort     =   0
-      AllowNetworking =   "all"
-      AllowFullScreen =   "false"
    End
    Begin VB.Label Label1 
       BackColor       =   &H00000000&
       Height          =   375
       Left            =   0
-      TabIndex        =   9
+      TabIndex        =   7
       ToolTipText     =   "^_^"
       Top             =   0
       Width           =   495
@@ -221,7 +211,7 @@ SBEMAIL.Play
 End If
 End Sub
 Private Sub Aboutbutton_Click()
-SBEMAIL.stop
+SBEMAIL.Stop
 About.Show
 End Sub
 Private Sub add_Click()
@@ -235,7 +225,7 @@ inqir = MsgBox("Add This Email?", vbYesNo + vbQuestion, "Strong Bad's Email Play
 If inqir = 7 Then
 MsgBox "Email Not Added", vbOKOnly + vbInformation, "Strong Bad's Email Player"
 Else
-Open "archive.dat" For Append As 1
+Open App.Path + "\archive.dat" For Append As 1
 Write #1, (chooserStr)
 Close 1
 MsgBox "Email Added Successfully", vbOKOnly + vbInformation, "Strong Bad's Email Player"
@@ -244,7 +234,7 @@ End If
 End Sub
 
 Private Sub AboutUp_Click()
-SBEMAIL.stop
+SBEMAIL.Stop
 About.Show
 End Sub
 
@@ -321,7 +311,7 @@ optFile = True
 Dim chooserCrnt As String
 Dim chooserNum As Integer
 On Error GoTo noFile
-Open "archive.dat" For Input As 1
+Open App.Path + "\archive.dat" For Input As 1
 chooserNum = 0
 Do While Not EOF(1)
 chooserNum = chooserNum + 1
@@ -389,9 +379,9 @@ End If
 End Sub
 Private Sub stop_Click()
 If SBEMAIL100.Playing = True Then
-SBEMAIL100.stop
+SBEMAIL100.Stop
 ElseIf SBEMAIL.Playing = True Then
-SBEMAIL.stop
+SBEMAIL.Stop
 End If
 End Sub
 

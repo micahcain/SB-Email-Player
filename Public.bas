@@ -10,12 +10,12 @@ Public Function DownloadFile(URL As String, LocalFilename As String) As Boolean
 
 End Function
 Public Function emailNet(email As Integer)
-If Not emailNum = 100 Or emailNum = 118 Then
+If Not email = 100 Or email = 118 Then
 If SbEmailPlayer.SBEMAIL100.Visible = True Then
 SbEmailPlayer.SBEMAIL100.stop
 SbEmailPlayer.SBEMAIL100.Visible = False
 End If
-SbEmailPlayer.SBEMAIL.Movie = "http://www.homestarrunner.com/sbemail" & emailNum & ".swf"
+SbEmailPlayer.SBEMAIL.Movie = "http://www.homestarrunner.com/sbemail" & email & ".swf"
 SbEmailPlayer.SBEMAIL.Visible = True
 SbEmailPlayer.SBEMAIL.Play
 Else
@@ -23,11 +23,11 @@ If SbEmailPlayer.SBEMAIL.Visible = True Then
 SbEmailPlayer.SBEMAIL.stop
 SbEmailPlayer.SBEMAIL.Visible = False
 End If
-If emailNum = 100 Then
+If email = 100 Then
 SbEmailPlayer.SBEMAIL100.Movie = "http://www.homestarrunner.com/sbemailahundred.swf"
 SbEmailPlayer.SBEMAIL100.Visible = True
 SbEmailPlayer.SBEMAIL100.Play
-ElseIf emailNum = 118 Then
+ElseIf email = 118 Then
 SbEmailPlayer.SBEMAIL100.Movie = "http://www.homestarrunner.com/sbemail118.swf"
 SbEmailPlayer.SBEMAIL100.Visible = True
 SbEmailPlayer.SBEMAIL100.Play
